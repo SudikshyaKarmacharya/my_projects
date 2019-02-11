@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+body{
+  background-color: #f3f3f3;
+  width: 1600px;
+  margin: auto;
+  padding: auto;
+  max-width: 100%;
+}
+.my-projects {
+  overflow: hidden;
+  background: linear-gradient(60deg, black, grey);
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  height: 230px;
+  margin: 0;
+  padding: 0;
+  color: #bada55;
+  display: inline-block;
+  font: 12px 'Exo';
+} 
+
+.my-projects h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.project-dashboard{
+  float: left;
+  max-width: 400px;
+  margin: 0px 0px 0px 200px;
+  padding: 30px 50px 50px;
+}
+
+.project-description {
+  float: left;
+  max-width: 600px;
+  margin: 70px 200px 60px 90px;
+  font-size: 0.8vw;
+}
+
+button {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  height: 49px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #2985e0;
+  text-decoration: none;
+  font-weight: bold;
+}
