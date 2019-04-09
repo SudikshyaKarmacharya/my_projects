@@ -6,17 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>PBR-ProjectsBenefitReport</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.0/css/bootstrap.css">
     <link rel="stylesheet" href="_my_projects.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   </head>
   <body>
     <section>
       <div class="my-projects">
         <div class="project-dashboard">
           <h2>My Project Dashboard</h2>
-          <button onclick="add_project()"><img src="add_report_button.png"></button>
-          <p id="project-message"></p>         
+            <br />
+          <div class="col-md-6 text-left">
+            <button class="btn btn-my-projects" onclick="addProject()">Add Project</button>
+          </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <p id="project-message"></p>         
         </div>
-        <div class="project-description">
+        <div class="col-md-6 project-description">
           <p>This Project Dashboard enables you to collect feedback to ensure your key projects are on track and to measure and communicate success.<br/><br/>
           Manage your in-flight projects, track benefits realized and get reporting for both individual projects and at the portfolio level. <a href="#">Learn more</a></p>
         </div>
@@ -27,8 +37,23 @@
       
     </div>
     <script>
-        function add_project() {
-          document.getElementById("project-message").innerHTML = "Pop up form for new Project";
+        function addProject() {
+          let parent = document.getElementById("project-message");
+          let button = document.createElement("button");
+          const ptext = document.createTextNode("Pop up form for new Project             ");
+          button.id = "clearButton";
+          button.textContent = "clear";
+          button.addEventListener("click", clearPara);
+
+          parent.appendChild(ptext);
+          parent.appendChild(button);
+        }
+
+        function clearPara(){
+          let parent = document.getElementById("project-message");
+          const child = document.getElementById("clearButton");
+          parent.removeChild(child);
+          parent.removeChild(parent.firstChild);
         }
         </script>
   </body>

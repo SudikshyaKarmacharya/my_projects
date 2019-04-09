@@ -7,6 +7,7 @@ body{
   padding: auto;
   max-width: 100%;
 }
+
 .my-projects {
   overflow: hidden;
   background: linear-gradient(60deg, black, grey);
@@ -29,16 +30,28 @@ body{
 
 .project-dashboard{
   float: left;
-  max-width: 400px;
-  margin: 0px 0px 0px 200px;
+  max-width: 500px;
+  margin: 0px 0px 0px 100px;
   padding: 30px 50px 50px;
+}
+
+.buttons .add-project1 .add-project2{
+  background-color: #4CAF50; /* Green */
+  border: 0px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
 }
 
 .project-description {
   float: left;
-  max-width: 600px;
-  margin: 70px 200px 60px 90px;
-  font-size: 0.8vw;
+  max-width: 700px;
+  margin: 50px 0px;
+  font-size: 0.9vw;
 }
 
 button {
@@ -52,4 +65,66 @@ a:link, a:visited, a:hover, a:active {
   color: #2985e0;
   text-decoration: none;
   font-weight: bold;
+}
+
+.btn-my-projects{
+  background: #2b9e48;
+  color: white;
+  position: relative;
+  font-size: 1.25em;
+  padding: 12px 15px 12px 85px;
+  border: none;
+  font-family: "Exo", sans-serif;
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+}
+
+.btn {
+  border-radius: 0;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1.42857;
+  user-select: none;  
+}
+
+button {
+  -webkit-appearance: button;
+  text-transform: none;
+  font: inherit;
+  margin: 0;
+  align-items: flex-start;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-indent: 0px;
+  text-shadow: none;
+
+}
+.btn-my-projects::before {
+  box-sizing: border-box;
+  background: #207636;
+  top: 0;
+  height: 100%;
+  border-right: 1px solid rgba(255, 255, 255, 0);
+  content: "+";
+  display: block;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  font-size: 2.25em;
+}
+
+button:hover::before {
+  background-color: #2b9e48;
+  color: white;
+}
+
+.btn:hover {
+  color: white;
 }
